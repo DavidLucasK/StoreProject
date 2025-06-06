@@ -1,31 +1,40 @@
 "use client";
 
 import style from "./Navbar.module.css";
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link'
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/../public/assets/logoConfeitaria2.png";
 
 export default function Navbar() {
-     const [scrolled, setScrolled] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const isScrolled = window.scrollY > 30;
-        setScrolled(isScrolled);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className={`${style.navbar} ${scrolled ? style.scrolled : ''}`}>
-       <nav className={`${style.navbarContainer} ${scrolled ? style.scrolled : ''}`}>
-            <ul className={style.menu}>
-                <li><Link href="/"> Cardapio </Link></li>
-                <li><Link href="/">  </Link></li>
-            </ul>
-       </nav>
-    </div>
+    <nav
+      className={`${style.navbarContainer} ${scrolled ? style.scrolled : ""}`}
+    >
+      <ul className={style.menu}>
+        <li>
+          <Link href="/"> Cardápio </Link>
+        </li>
+        <li>
+          <Image className={style.logo} src={Logo} alt="Logo" width={70} />
+        </li>
+        <li>
+          <p>Contato</p>
+        </li>
+      </ul>
+    </nav>
   );
 }
