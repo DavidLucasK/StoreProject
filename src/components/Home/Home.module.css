@@ -1,0 +1,52 @@
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  height: 75vh;
+  padding: 20px; /* Evita que a imagem encoste nas bordas */
+  margin-top: 8rem;
+}
+
+.logoHome {
+  width: 100%;
+  max-width: 800px; /* Define um tamanho máximo */
+  height: auto; /* Mantém a proporção */
+  animation: fadeIn 2s forwards;
+}
+
+@media screen and (max-width: 1024px) {
+  .logoHome {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logoHome {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logoHome {
+    max-width: 90%; /* Em telas muito pequenas, usa 90% da largura */
+    margin-bottom: 75px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logoHome {
+    filter: invert();
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
