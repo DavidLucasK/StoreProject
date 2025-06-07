@@ -3,11 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  position: relative;
+  width: 100vw;
   height: 7rem;
   background-color: var(--bg-dark);
   bottom: 0;
   opacity: 0;
+  font-family: "Poppins";
+  z-index: 2;
 }
 
 .footerContainerScrolled {
@@ -15,16 +18,21 @@
 }
 
 .footerContainer p {
-  color: white;
+  color: var(--bg-light);
   cursor: default;
 }
 
 .logoImg {
+  will-change: transform;
   transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.logoImg img {
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {

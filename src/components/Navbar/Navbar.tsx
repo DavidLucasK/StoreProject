@@ -26,10 +26,12 @@ export default function Navbar() {
     >
       <ul className={style.menu}>
         <li>
-          <Link href="/"> Cardápio </Link>
+          <Link href="/">Produtos</Link>
         </li>
         <li>
-          <Image className={style.logo} src={Logo} alt="Logo" width={70} />
+          <Link className={style.logo} href="/">
+            <Image src={Logo} alt="Logo" width={70} quality={100} />
+          </Link>
         </li>
         <li>
           <p>Contato</p>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import LogoDL from "@/../public/assets/logoConfeitaria3.png";
 
 export default function Footer() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,10 +28,14 @@ export default function Footer() {
         scrolled ? styles.footerContainerScrolled : ""
       }`}
     >
-      <Link href={"https://www.davidlucasfr.com.br"} target="blank">
-        <p>LOGO</p>
+      <Link
+        className={styles.logoImg}
+        href={"https://www.davidlucasfr.com.br"}
+        target="blank"
+      >
+        <Image src={LogoDL} alt="Logo" width={50} quality={100} />
       </Link>
-      <p>© 2025 Salve uma Criança. Todos os direitos reservados.</p>
+      <p>© 2025 J&D Patisserie. Todos os direitos reservados.</p>
     </div>
   );
 }

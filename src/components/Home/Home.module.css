@@ -2,18 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center; /* Centraliza verticalmente */
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding: 20px; /* Evita que a imagem encoste nas bordas */
-  margin-top: 8rem;
+  margin-top: 2rem;
   background-color: var(--bg-light);
 }
 
 .logoHome {
-  width: 100%;
-  max-width: 800px; /* Define um tamanho máximo */
-  height: auto; /* Mantém a proporção */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   animation: fadeIn 2s forwards;
+  opacity: 0;
+}
+
+.video {
+  position: relative;
+  z-index: -1;
+  width: 100vw;
 }
 
 .logo {
@@ -39,12 +46,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logoHome {
-    filter: invert();
-  }
-}
-
 @keyframes fadeIn {
   from {
     transform: scale(0.9);
@@ -52,6 +53,6 @@
   }
   to {
     transform: scale(1);
-    opacity: 0.9;
+    opacity: 1;
   }
 }
