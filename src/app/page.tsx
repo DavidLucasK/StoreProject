@@ -15,7 +15,7 @@ export default function Index() {
 
   return (
     <div className="pageContainer">
-      <Navbar onNavigate={handleNavigate} />
+      <Navbar />
       <HomeContent />
       <Footer />
     </div>

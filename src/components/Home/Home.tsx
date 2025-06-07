@@ -1,8 +1,6 @@
 "use client";
 
 import styles from "./Home.module.css";
-import Image from "next/image";
-import Logo from "@/../public/assets/logoConfeitariaNOBG.png";
 
 export default function Home() {
   return (
