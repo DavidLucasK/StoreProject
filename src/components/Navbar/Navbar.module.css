@@ -5,7 +5,7 @@
   right: 0;
   margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 60%;
   height: 3.5rem;
   justify-content: space-between;
   align-items: center;
@@ -14,9 +14,8 @@
   gap: 1rem;
   border: 2px solid transparent;
   border-radius: 1rem;
-  transition: width 0.5s linear, top 0.5s linear;
-  opacity: 0;
-  animation: fade-in 0.3s forwards;
+  transition: width 0.3s ease-in-out, top 0.3s linear,
+    background-color 0.3s ease-in-out;
 }
 
 .scrolled {
@@ -24,7 +23,7 @@
   justify-content: center;
   left: 50%;
   transform: translateX(-50%);
-  top: 1.7rem;
+  top: 2rem;
   border: 2px solid var(--text-color);
   border-radius: 1rem;
   background-color: #f2e6d8d2;
