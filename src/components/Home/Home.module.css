@@ -7,6 +7,7 @@
   padding: 20px; /* Evita que a imagem encoste nas bordas */
   margin-top: 2rem;
   background-color: var(--bg-light);
+  flex-direction: column;
 }
 
 .logoHome {
@@ -25,6 +26,12 @@
 
 .logo {
   color: var(--text-color);
+}
+
+.product {
+  padding: 2rem;
+  background-color: red;
+  height: 30vh;
 }
 
 @media screen and (max-width: 1024px) {
